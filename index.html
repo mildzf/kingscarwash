@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Wash Website</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    /* General Blue Theme */
+    body {
+      background-color: #f0f8ff; /* Light blue background */
+      color: #333; /* Dark text for contrast */
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background-color: #2575fc; /* Primary blue */
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .hero-section h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+    }
+
+    .hero-section p {
+      font-size: 1.25rem;
+      margin-top: 20px;
+    }
+
+    .hero-section .btn {
+      margin-top: 30px;
+      font-size: 1.25rem;
+      padding: 10px 30px;
+    }
+
+    /* Service Cards */
+    .service-card {
+      text-align: center;
+      padding: 30px;
+      border: none;
+      border-radius: 15px;
+      background: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .service-card i {
+      font-size: 3rem;
+      color: #2575fc; /* Primary blue for icons */
+      margin-bottom: 20px;
+    }
+
+    .service-card h5 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #2575fc; /* Primary blue for headings */
+    }
+
+    .service-card p {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    /* Testimonials Section */
+    .testimonial-card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      background: white;
+    }
+
+    .testimonial-card .blockquote-footer {
+      color: #2575fc; /* Primary blue for footer text */
+    }
+
+    /* FAQ Section */
+    .accordion-button {
+      background: white;
+      color: #2575fc; /* Primary blue for text */
+    }
+
+    .accordion-button:not(.collapsed) {
+      background: #2575fc; /* Primary blue when expanded */
+      color: white;
+    }
+
+    .accordion-body {
+      background: #f0f8ff; /* Light blue background */
+    }
+
+    /* CTA Banner */
+    .cta-banner {
+      background: #2575fc; /* Primary blue */
+      color: white;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .cta-banner .btn {
+      background: white;
+      color: #2575fc;
+      border: none;
+      font-weight: bold;
+    }
+
+    .cta-banner .btn:hover {
+      background: #e6f0ff;
+    }
+
+    /* Footer */
+    footer {
+      background: #1c1c1c; /* Dark background for contrast */
+      color: white;
+      padding: 40px 0;
+    }
+
+    footer a {
+      color: #2575fc; /* Primary blue for links */
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="#">Car Wash</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials">Testimonials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#faq">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <h1>Welcome to Car Wash</h1>
+      <p class="lead">We make your car shine like new!</p>
+      <a href="#contact" class="btn btn-light btn-lg">Book Your Appointment Now</a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="container my-5">
+    <h2 class="text-center mb-4">Our Services</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card service-card">
+          <i class="bi bi-droplet"></i>
+          <h5>Exterior Wash</h5>
+          <p>Get your car's exterior cleaned and polished to perfection.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card service-card">
+          <i class="bi bi-brush"></i>
+          <h5>Interior Cleaning</h5>
+          <p>Thorough cleaning of your car's interior for a fresh feel.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card service-card">
+          <i class="bi bi-shine"></i>
+          <h5>Car Polish</h5>
+          <p>Professional polishing to restore your car's shine.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">What Our Customers Say</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card testimonial-card">
+            <div class="card-body">
+              <p class="card-text">"The best car wash service I've ever used! My car looks brand new every time."</p>
+              <footer class="blockquote-footer">John Doe</footer>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card testimonial-card">
+            <div class="card-body">
+              <p class="card-text">"Friendly staff, quick service, and amazing results. Highly recommend!"</p>
+              <footer class="blockquote-footer">Jane Smith</footer>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card testimonial-card">
+            <div class="card-body">
+              <p class="card-text">"Affordable pricing and top-notch quality. Will definitely come back!"</p>
+              <footer class="blockquote-footer">Mike Johnson</footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="container my-5">
+    <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+            How long does a car wash take?
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            A basic wash takes about 20-30 minutes, while a full detail can take up to 2 hours.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            Do you use eco-friendly products?
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes, we use only eco-friendly and biodegradable products to protect your car and the environment.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to Make Your Car Shine?</h2>
+      <p class="lead">Book your appointment today and experience the best car wash service in town!</p>
+      <a href="#contact" class="btn btn-light btn-lg">Book Now</a>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <div class="form-header text-center mb-4">
+        <i class="bi bi-calendar-check fs-1"></i>
+        <h2>Book Your Appointment</h2>
+        <p class="lead">Fill out the form below to schedule your service.</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScNVDwO5uhPcKV94dtSb74XRUKIfXNKohi7clsicMWKGxH1-w/viewform?embedded=true" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Contact Us</h5>
+          <p>Email: info@carwash.com<br>Phone: (123) 456-7890</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Follow Us</h5>
+          <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+        </div>
+        <div class="col-md-4">
+          <h5>Location</h5>
+          <p>123 Car Wash Lane, City, State, ZIP</p>
+        </div>
+      </div>
+      <hr>
+      <p class="text-center mb-0">&copy; 2023 Car Wash. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
